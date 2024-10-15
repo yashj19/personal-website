@@ -3,7 +3,9 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <div style={styles.logo}>MyLogo</div>
+      <div style={styles.logoContainer}>
+        <img src="https://i.ebayimg.com/images/g/JvUAAOSww1lijUjj/s-l1200.jpg" alt="Logo" style={styles.logo} />
+      </div>
       <ul style={styles.navLinks}>
         <li><a href="#about" style={styles.navLink}>About</a></li>
         <li><a href="#projects" style={styles.navLink}>Projects</a></li>
@@ -27,10 +29,14 @@ const styles = {
     zIndex: 1000,
 	boxSizing: 'border-box'
   },
+  logoContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   logo: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    color: '#fff'
+    width: '40px', // Adjust the size of the logo as needed
+    height: 'auto',
+    borderRadius: '40px'
   },
   navLinks: {
     listStyleType: 'none',
@@ -42,7 +48,7 @@ const styles = {
     color: '#fff',
     textDecoration: 'none',
     marginLeft: '2rem',
-    fontSize: '1rem'
+    fontSize: '1.1rem'
   }
 };
 
