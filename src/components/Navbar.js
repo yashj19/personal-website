@@ -1,55 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import logo from "../assets/personalLogo.png";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav style={styles.navbar}>
-      <div style={styles.logoContainer}>
-        <img src="https://i.ebayimg.com/images/g/JvUAAOSww1lijUjj/s-l1200.jpg" alt="Logo" style={styles.logo} />
+    <nav
+      className={`bg-[#252525] text-white fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 px-7 transition-shadow duration-300 ${
+        isScrolled ? 'shadow-md' : ''
+      }`}
+    >
+      <div className="flex items-center">
+        <a href="#home">
+          <img src={logo} alt="Logo" className="w-10 h-auto rounded-xl" /> {/* Adjust size as needed */}
+        </a>
       </div>
-      <ul style={styles.navLinks}>
-        <li><a href="#about" style={styles.navLink}>About</a></li>
-        <li><a href="#projects" style={styles.navLink}>Projects</a></li>
-        <li><a href="#experience" style={styles.navLink}>Experience</a></li>
-        <li><a href="#contact" style={styles.navLink}>Contact</a></li>
+      <ul className="flex space-x-8">
+        <li><a href="#projects" className="text-[1.1rem] hover:text-gray-400">Projects</a></li>
+        <li><a href="#experience" className="text-[1.1rem] hover:text-gray-400">Experience</a></li>
+        <li><a href="#contact" className="text-[1.1rem] hover:text-gray-400">Contact</a></li>
       </ul>
     </nav>
   );
-};
-
-const styles = {
-  navbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '1rem 2rem',
-    backgroundColor: '#000',
-    position: 'fixed',
-    top: 0,
-    width: '100%',
-    zIndex: 1000,
-	boxSizing: 'border-box'
-  },
-  logoContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  logo: {
-    width: '40px', // Adjust the size of the logo as needed
-    height: 'auto',
-    borderRadius: '40px'
-  },
-  navLinks: {
-    listStyleType: 'none',
-    display: 'flex',
-    margin: 0,
-    padding: 0
-  },
-  navLink: {
-    color: '#fff',
-    textDecoration: 'none',
-    marginLeft: '2rem',
-    fontSize: '1.1rem'
-  }
 };
 
 export default Navbar;
