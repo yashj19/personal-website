@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div className="py-16 bg-gray-100 flex flex-col items-center">
+    <div id='contact' className="py-16 bg-gray-100 flex flex-col items-center">
       {/* Contact Title */}
       <h2 className="text-4xl font-bold mb-12 text-center underline underline-offset-[10px] decoration-8 decoration-[#3bb399]">Contact Me</h2>
       
