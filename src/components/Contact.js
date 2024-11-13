@@ -18,8 +18,8 @@ const Contact = () => {
 
         <div className="flex items-center">
           <FaGithub className="text-gray-800 text-4xl mr-4" />
-          <a href="https://github.com/RubiksCoder" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-500">
-            github.com/RubiksCoder
+          <a href="https://github.com/yashj19" target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-blue-500">
+            github.com/yashj19
           </a>
         </div>
 
