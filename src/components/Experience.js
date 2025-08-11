@@ -2,7 +2,31 @@ import React from 'react';
 import { SECONDARY } from '../constants';
 import ChipList from './ChipList';
 
+/*
+NEW EXPERIENCE INFO:
+BitGo May 2025 – Present
+Software Engineer Intern Remote
+• Researched, designed, and implemented a secure and scalable Proof of Liabilities system for BitGo’s Go Network to
+support 1B+ accounts, leveraging zero-knowledge SNARK proofs and Merkle tree commitments.
+• Co-built an open-source CLI tool in Golang for proof generation and logarithmic-time verification using the gnark
+library, with comprehensive unit tests and integration tests.
+• Automated the liability proof generation pipeline as a bi-weekly cron job using the Snowflake SDK, Python, and
+Postgres; deployed it via Docker and Kubernetes, with CI/CD integration through GitHub Actions.
+*/
+
 const experiences = [
+  {
+    id: 4,
+    period: 'May 2025 - Present',
+    title: 'Software Engineer Intern',
+    company: 'BitGo',
+    skills: ['Go', 'Python', 'Docker', 'Kubernetes', 'Postgres', 'Snowflake', 'zk-SNARKs'],
+    bullets: [
+      'Researched, designed, and implemented a secure and scalable Proof of Liabilities system for BitGo’s Go Network to support 1B+ accounts, leveraging zero-knowledge SNARK proofs and Merkle tree commitments.',
+      'Co-built an open-source CLI tool in Golang for proof generation and logarithmic-time verification using the gnark library, with comprehensive unit tests and integration tests.',
+      'Automated the liability proof generation pipeline as a bi-weekly cron job using the Snowflake SDK, Python, and Postgres; deployed it via Docker and Kubernetes, with CI/CD integration through GitHub Actions.',
+    ],
+  },
   {
     id: 1,
     period: 'Sep 2024 - Present',
@@ -36,9 +60,9 @@ const experiences = [
     company: 'Cynorix',
     skills: ['REST', 'Node.js', 'Express', 'TypeScript', 'MongoDB', 'Firebase', 'Redis', 'Postman'],
     bullets: [
-      'Architected, developed, and deployed vital components of the Cynorix 2FA RESTful backend using, including a smart authentication algorithm to reduce user 2FA time by 70%.',
+      'Researched and prototyped a novel multi-factor authentication (MFA) system under Prof. Amir Khandani to authenticate users based on geolocation and local network data.',
       // 'Spearheaded robust client API development for Cynorix 2FA, fortified with OAuth 2.0 and optimized with Redis.',
-      // 'Leveraged Firebase Cloud Messaging to decrease server-client communication overhead by 40%.',
+      // 'Leveraged Firebase Cloud Messaging to decrease server-client communication overhead.',
       // 'Successfully managed Stripe payment states in Node webhooks to implement a discount feature for products.',
       // 'Prototyped a cross-platform mobile 2FA app using React and React Native.',
       // 'Proficiently used Postman, Google Developer Tools, and Firebase Console for effective debugging/testing.',
