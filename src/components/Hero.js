@@ -1,4 +1,4 @@
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 import { useState, useEffect, useRef } from "react";
 import React from 'react';
 import { PRIMARY, SECONDARY } from "../constants";
@@ -47,13 +47,13 @@ const Hero = () => {
     setTimeout(typeWriter, 500);
   }, []);
 
-  const splineLink = "https://prod.spline.design/qBn4bUehIqcHffge/scene.splinecode";
+  // const splineLink = "https://prod.spline.design/qBn4bUehIqcHffge/scene.splinecode";
   const githubLink = "https://github.com/RubiksCoder/Cadence";
 
   return (
     <div id='home' className='relative bg-[#252525]'>
       <div className="absolute inset-0 z-0">
-        <Spline scene={splineLink} />
+        {/* <Spline scene={splineLink} /> */}
       </div>
       <div className="relative flex flex-col justify-center items-start h-[40rem] p-[12rem] z-10">
         <h1 className='mb-10 text-7xl text-white font-extrabold'>{"Hey, I'm "} 
