@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from "../assets/personalLogo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,9 +26,7 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center">
-        <a href="#home">
-          <img src={logo} alt="Logo" className="w-10 h-auto rounded-xl" /> {/* Adjust size as needed */}
-        </a>
+       
       </div>
       <ul className="flex space-x-8">
         <li><a href="#projects" className="text-[1.1rem] hover:text-gray-400">Projects</a></li>
